@@ -2,47 +2,54 @@
 /* Background SVG created by Matt Lipman at "https://www.svgbackgrounds.com/#flat-mountains" */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&family=Satisfy&display=swap');
 
-html {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  background-color:   #a5dad4;
+  background-color:   #a7ded6;
   font-family: Noto Sans JP, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fcfcfc;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cb669c' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23db4849' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23be679c' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23cd6c82' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23b05ca7' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23c09098' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23a559a9' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23b3a5b2' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%239156ac' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23a8b8c7' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%237d52b0' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%2398ddd5' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  color: #ffffff;
   background-attachment: fixed;
   background-size: cover;
+  background-image: linear-gradient(
+    to bottom, 
+    #eff5ed0f, 
+    #e4e4e423), 
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23cb669c' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23db4849' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23be679c' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23cd6c82' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23b05ca7' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23c09098' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23a559a9' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23b3a5b2' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%239156ac' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23a8b8c7' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%237d52b0' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%2398ddd5' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    position: relative;
+    z-index: -1;
 }
 
-.header{
+.header {
   width: 1280px;
   position: absolute;
   top: 0px;
   font-family: Satisfy, Sans-Serif;
-  color: #fcfcfc;
   font-size: 25px;
   text-align: center;
 }
 
-h2{
+h2 {
   margin: 20px 50px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
-.game-container{
+.game-container {
   width: 1280px;
   height: 572px;
   margin-top: 140px;
   padding: 0px;
 }
 
-#playercomputercontainer{
+#playercomputercontainer {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;  
@@ -55,8 +62,9 @@ h2{
   flex-grow: 1;
 }
 
-#playerScore, #computerScore{
-  background-color: #7bd8cf;
+#playerScore, #computerScore {
+  background-color: #88e1d8;
+  font-family: Noto Sans JP, sans-serif;
   color: #fcfcfc;
   padding: 15px 30px;
   margin: 10px;
@@ -64,35 +72,37 @@ h2{
   border-radius: 50px;
 }
 
-.icon-container{
+.icon-container {
   max-width: 405.33px;
   max-height: 132px;
 }
 
 .fas {
-  color: #e4fcf7;
+  color: #f1fffa;
   font-size: 60px;
   margin: 21.3px;
   padding: 4.1px;
   User-select: none;
 }
 
-#player .fas:hover{
+#player .fas:hover {
   cursor: pointer;
   filter: brightness(102%);
 }
 
-.selected{
-  color: #b9f5ef!important;
-  font-size: 110px;
+.selected {
+  color: #f7fefd!important;
+  font-size: 100px;
 }
 
-#player .choice, #computer .choice{
-  color: #f6fefc  !important;
+#player .choice, #computer .choice {
+  color: #fcfcfc !important;
   font-style: italic;
+  font-size: 30px;
+  font-family: Satisfy, Sans-Serif;
 }
 
-.computer-container{
+.computer-container {
   width: 585.33px;
   margin: 20px 50px 20px 0px;
   order: 2;
@@ -110,31 +120,50 @@ h2{
   order: 1;
   flex-grow: 1;
   font-size: 50px;
-  margin: 0px;
+  margin: 0px 0px 5px;
   text-align: center;
+  color: rgb(254, 254, 254);
 }
 
-button{
+.btn:link, .btn:visited {
   order: 2;
-  background-color: #bdd8d5;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative; 
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(102%);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn-white {
+  background-color: #a9baba;
   font-family: Noto Sans JP, sans-serif;
   color: #fefefe;
-  padding: 10px 32px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 700;
-  display: inline-block;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 50px;
   border: #fcfcfc solid 3px;
-  margin: 20px 50px;
-  outline: none;
 }
 
-button:hover{
-  filter: brightness(102%);
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; 
 }
 
 /* Media Query: Large Smartphone (Vertical) */
